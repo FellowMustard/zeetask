@@ -25,7 +25,6 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
   },
   callbacks: {
     async signIn({ account, user }) {
-      console.log(account, user);
       if (account?.provider !== "credentials") return true;
 
       const existUser = await getUserById(user.id!);
