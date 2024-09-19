@@ -47,7 +47,10 @@ function Verification() {
   }, []);
 
   useEffect(() => {
-    if (process.env.NEXT_PUBLIC_NODE_ENV === "prod" || effectRun.current) {
+    if (
+      process.env.NEXT_PUBLIC_NODE_ENV === "production" ||
+      effectRun.current
+    ) {
       submitToken();
     }
     return () => {
