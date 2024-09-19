@@ -90,7 +90,6 @@ export async function POST(req: Request) {
     });
   } catch (err) {
     if (err instanceof AuthError) {
-      console.log("here", err);
       switch (err.type) {
         case "CredentialsSignin":
           return NextResponse.json(

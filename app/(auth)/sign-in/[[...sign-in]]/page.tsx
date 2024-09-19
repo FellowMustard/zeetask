@@ -56,7 +56,6 @@ function SignIn() {
   });
 
   const onSubmit = async (data: z.infer<typeof LoginSchema>) => {
-    console.log(data);
     startTransition(async () => {
       setStatusMsg("");
       setIsError(false);
